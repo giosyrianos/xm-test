@@ -1,8 +1,11 @@
 @use "sass:map";
 @use "@angular/material" as mat;
 
-$xm-primary: mat.define-palette(mat.$indigo-palette);
+@import './variables';
+
+$xm-primary: mat.define-palette($xm-primary-palette);
 $xm-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$xm-light: mat.define-palette($xm-light-palette, A200, A100, A400);
 
 $xm-warn: mat.define-palette(mat.$red-palette);
 
