@@ -1,0 +1,10 @@
+<app-sidenav
+	(menuToggled)="hideContent($event)"
+></app-sidenav>
+<div
+	*ngIf="!isMenuVisible"
+	style="display: grid; align-items: center;">
+	<h1>
+		dummy content Here
+	</h1>
+</div>
