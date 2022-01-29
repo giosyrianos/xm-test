@@ -6,11 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AngularMaterialModule } from './modules/angular-material.module';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { MobileMenuComponent } from './components/mobile-menu/mobile-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidenavComponent
+    SidenavComponent,
+    MobileMenuComponent
   ],
   imports: [
 		BrowserModule,
