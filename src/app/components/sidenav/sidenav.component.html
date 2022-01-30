@@ -1,6 +1,7 @@
 <div class="menu">
 	<button mat-icon-button (click)="toggleMenu()">
-		<mat-icon>menu</mat-icon>
+		<mat-icon *ngIf="!showMenu">menu</mat-icon>
+		<mat-icon *ngIf="showMenu">close</mat-icon>
 	</button>
 	<div class="logo-container">
 		<svg width="150" height="26" viewBox="0 0 150 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,8 +41,8 @@
 		</svg>
 	</div>
 </div>
-<mat-accordion>
-	<mat-expansion-panel [(expanded)]="showMenu">
+<mat-accordion class="menu-drawer">
+	<mat-expansion-panel [(expanded)]="showMenu" class="mobile-menu-container">
 		<app-mobile-menu></app-mobile-menu>
 	</mat-expansion-panel>
 </mat-accordion>

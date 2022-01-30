@@ -5,14 +5,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
-import {CdkTreeModule} from '@angular/cdk/tree';
+import { CdkTreeModule } from '@angular/cdk/tree';
+import {MatDividerModule} from '@angular/material/divider';
 @NgModule({
 	exports: [
 		MatButtonModule,
 		MatIconModule,
 		MatExpansionModule,
 		CdkTreeModule,
-		MatSidenavModule
+		MatSidenavModule,
+		MatDividerModule
 	]
 })
 

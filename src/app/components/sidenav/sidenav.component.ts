@@ -8,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class SidenavComponent implements OnInit {
 	@Output() menuToggled = new EventEmitter<boolean>();
 
-	showMenu = false;
+	showMenu = true;
 	constructor() { }
 
 	ngOnInit(): void {

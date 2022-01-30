@@ -1,13 +1,19 @@
 
 @use '~@angular/material' as mat;
+@import "./assets/styles/typography";
 @import "./assets/styles/light";
 
 @include mat.core();
 
+@include mat-core($xm-typography);
 @include mat.all-component-themes($xm-theme);
 // @include mat.core-theme($xm-theme)
 
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0;}
+
+* {
+	font-family: Gilroy, sans-serif;
+}

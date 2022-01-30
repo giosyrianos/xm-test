@@ -1,0 +1,12 @@
+@import '~@angular/material/theming';
+
+@font-face {
+	font-family: Gilroy;
+	src: url(../fonts/gilroy/gilroy_regular-webfont.ttf) format("truetype");
+}
+
+$xm-typography: mat-typography-config(
+  $font-family: Gilroy,
+);
+
+@include angular-material-typography($xm-typography);

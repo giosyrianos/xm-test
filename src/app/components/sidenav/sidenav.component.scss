@@ -10,3 +10,18 @@
 		color: #ffffff;
 	}
 }
+
+mat-accordion mat-expansion-panel {
+	background: #000;
+}
+
+mat-accordion ::ng-deep .mat-expansion-panel {
+	border-bottom-left-radius: 0!important;
+	border-bottom-right-radius: 0!important;
+	border-top-left-radius: 0!important;
+	border-top-right-radius: 0!important;
+}
+
+.mobile-menu-container ::ng-deep .mat-expansion-panel-body {
+	padding: 0;
+}

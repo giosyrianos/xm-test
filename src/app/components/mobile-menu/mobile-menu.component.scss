@@ -1,5 +1,21 @@
-.example-tree-node {
+@import "../../../assets/styles/variables";
+
+
+.tree-node {
   display: flex;
   align-items: center;
 	justify-content: space-between;
+	color: #fff;
+}
+
+.active {
+	color: $xm-primary;
+}
+
+.tree-node {
+	
+}
+
+mat-divider {
+	color: #fff
 }

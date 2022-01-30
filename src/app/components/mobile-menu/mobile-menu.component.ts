@@ -100,7 +100,7 @@ export class MobileMenuComponent implements OnInit {
     return null;
   }
 
-  shouldRender(node: any) {
+	shouldRender(node: any) {
     let parent = this.getParentNode(node);
     while (parent) {
       if (!parent.isExpanded) {
