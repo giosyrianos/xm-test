@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import {ArrayDataSource} from '@angular/cdk/collections';
 import {FlatTreeControl} from '@angular/cdk/tree';
 
@@ -10,6 +10,7 @@ import {FlatTreeControl} from '@angular/cdk/tree';
 })
 
 export class MobileMenuComponent implements OnInit {
+	@ViewChild('menuTree') menuTree: any
 
 	constructor() { }
 
@@ -108,9 +109,11 @@ export class MobileMenuComponent implements OnInit {
       }
       parent = this.getParentNode(parent);
     }
-    return true;
-  }
+		return true;
+	}
 
-
-
+	collapseNodes() {
+		this.treeControl.collapseAll()
+		console.warn('nodes collapsing')
+	}
 }
