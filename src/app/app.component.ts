@@ -6,7 +6,12 @@ import { Component } from '@angular/core';
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-	title = 'test-themes';
+// this should be provided by a service
+
+	title = `Lorem ipsum dolor? Excepteur sint occaecat!`;
+	mainText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+	magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.`
 	isMenuVisible = false;
 
 	hideContent(e: any) {
