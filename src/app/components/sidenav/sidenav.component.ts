@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild, Input } from '@angular/core';
 
 @Component({
 	selector: 'app-sidenav',
@@ -8,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class SidenavComponent implements OnInit {
 	@Output() menuToggled = new EventEmitter<boolean>();
 
-	showMenu = true;
+	showMenu = false;
 	constructor() { }
 
 	ngOnInit(): void {
@@ -17,6 +17,10 @@ export class SidenavComponent implements OnInit {
 	toggleMenu() {
 		this.showMenu = !this.showMenu;
 		this.menuToggled.emit(this.showMenu)
+	}
+
+	onExpansionClose(e: any) {
+		this.showMenu = false;
 	}
 
 }

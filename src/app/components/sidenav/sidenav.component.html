@@ -42,7 +42,10 @@
 	</div>
 </div>
 <mat-accordion class="menu-drawer">
-	<mat-expansion-panel [(expanded)]="showMenu" class="mobile-menu-container">
-		<app-mobile-menu></app-mobile-menu>
+	<mat-expansion-panel [(expanded)]="showMenu" class="mobile-menu-container"
+	(closed)="onExpansionClose($event)"
+	[ngClass]="{'full-height': showMenu}"
+>
+		<app-mobile-menu *ngIf="showMenu"></app-mobile-menu>
 	</mat-expansion-panel>
 </mat-accordion>
