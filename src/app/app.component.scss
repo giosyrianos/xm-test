@@ -1,0 +1,57 @@
+.mobile-menu {
+	position: fixed;
+	width: 100%;
+}
+
+.hero {
+  background-color: #000000;
+  color: #ffffff;
+
+  .globe-container {
+    background-image: url("../assets/images/globe.png");
+    background-repeat: no-repeat;
+    background-size: 291px 291px, contain;
+    height: 255px;
+    background-position: -44px -38px;
+  }
+
+  .main-text {
+    padding: 0 30px 30px 30px;
+    margin-top: 30px;
+
+    h1 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 38px;
+      line-height: 46px;
+      color: #ffffff;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 24px;
+			font-weight: 500;
+    }
+  }
+
+	.call-to-action {
+    padding: 0 30px 30px 30px;
+		display: grid;
+		place-items: center;
+
+		button {
+			width: 100%;
+			font-weight: bold;
+			height: 60px;
+			margin: 10px 0;
+		}
+	}
+
+	.reminder {
+		font-size: 14px;
+		padding: 0 30px;
+
+		a { color: #fff;}
+	}
+
+}
