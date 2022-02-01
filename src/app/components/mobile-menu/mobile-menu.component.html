@@ -1,30 +1,33 @@
-
-	<div>
-		<span class="tree-node">Log In</span>
-	</div>
-	<mat-divider (inset)="true"></mat-divider>
-	<cdk-tree [dataSource]="dummy_menu_items" [treeControl]="treeControl">
-		<!-- This is the tree node template for leaf nodes -->
-		<cdk-tree-node *cdkTreeNodeDef="let node" cdkTreeNodePadding [style.display]="shouldRender(node) ? 'flex' : 'none'"
-			class="tree-node">
+<div class="tree-node">
+	<span class="tree-node-text">Log In </span>
+</div>
+<mat-divider (inset)="true"></mat-divider>
+<cdk-tree [dataSource]="dummy_menu_items" [treeControl]="treeControl" #menuTree>
+	<!-- This is the tree node template for leaf nodes -->
+	<cdk-tree-node *cdkTreeNodeDef="let node" cdkTreeNodePadding [style.display]="shouldRender(node) ? 'flex' : 'none'"
+		class="tree-node child-node">
+		<span>
 			{{node.name}}
-			<!-- use a disabled button to provide padding for tree leaf -->
-			<button mat-icon-button disabled></button>
-		</cdk-tree-node>
-		<!-- This is the tree node template for expandable nodes -->
-		<cdk-tree-node *cdkTreeNodeDef="let node; when: hasChild" cdkTreeNodePadding
-			[style.display]="shouldRender(node) ? 'flex' : 'none'" class="tree-node"
-			[ngClass]="{'active': node.isExpanded}"
-		>
-
+		</span>
+		<!-- use a disabled button to provide padding for tree leaf -->
+		<button mat-icon-button disabled></button>
+	</cdk-tree-node>
+	<!-- This is the tree node template for expandable nodes -->
+	<cdk-tree-node *cdkTreeNodeDef="let node; when: hasChild" cdkTreeNodePadding
+		[style.display]="shouldRender(node) ? 'flex' : 'none'" class="tree-node parent-node"
+		[ngClass]="{'active': node.isExpanded}">
+		<span class="tree-node-text">
 			{{node.name}}
+		</span>
 
-			<button mat-icon-button cdkTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name"
-				(click)="node.isExpanded = !node.isExpanded" [style.visibility]="node.expandable ? 'visible' : 'hidden'">
-				<mat-icon class="mat-icon-rtl-mirror">
-					{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
-				</mat-icon>
-			</button>
-		</cdk-tree-node>
-	</cdk-tree>
+		<button mat-icon-button cdkTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name"
+			(click)="node.isExpanded = !node.isExpanded" [style.visibility]="node.expandable ? 'visible' : 'hidden'">
+			<mat-icon class="mat-icon-rtl-mirror">
+				{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+			</mat-icon>
+		</button>
+	</cdk-tree-node>
+</cdk-tree>
+<div class="btn-container">
 	<button mat-raised-button color="primary">Open Account</button>
+</div>
