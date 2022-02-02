@@ -34,3 +34,22 @@ body {
 .mat-stroked-button {
 	border: 1px solid $xm-primary!important;
 }
+
+.mat-menu-panel {
+	border-radius: 0!important;
+	width: 196px;
+	box-shadow: rgba(131, 129, 129, 0.35) 0px 1px 15px;
+}
+
+.mat-menu-content {
+	background-color: #000000;
+
+	li {
+		color:#ffffff;
+		font-weight: 600;
+	}
+
+	.mat-menu-item {
+
+	}
+}
