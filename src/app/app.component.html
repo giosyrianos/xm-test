@@ -1,5 +1,5 @@
-<app-sidenav class="mobile-menu" (menuToggled)="hideContent($event)"></app-sidenav>
-<div *ngIf="!isMenuVisible" style="display: grid; align-items: center;">
+<app-sidenav *ngIf="currentScreenSize === 'Small'" class="mobile-menu" (menuToggled)="hideContent($event)"></app-sidenav>
+<div *ngIf="!isMenuVisible">
 	<hero-mobile
 		[title]="title"
 		[mainText]="mainText"
