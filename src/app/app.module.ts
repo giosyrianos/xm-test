@@ -9,6 +9,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MobileMenuComponent } from './components/mobile-menu/mobile-menu.component';
 import { HeroMobileComponent } from './components/hero-mobile/hero-mobile.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
+import { HeroComponent } from './components/hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MainMenuComponent } from './components/main-menu/main-menu.component';
     SidenavComponent,
     MobileMenuComponent,
     HeroMobileComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    HeroComponent
   ],
   imports: [
 		BrowserModule,

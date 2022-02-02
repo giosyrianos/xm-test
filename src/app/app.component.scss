@@ -3,9 +3,13 @@
   width: 100%;
 }
 
-.main-menu-container {
+.component-container {
 	width: 100%;
-	background-color: #000000;
 	padding:0;
-	margin: 0;
+	margin: -2px 0 0 0;
+
+	&.black {
+		background-color: #000000;
+	}
 }
+

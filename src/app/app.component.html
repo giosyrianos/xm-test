@@ -1,11 +1,15 @@
 <app-sidenav *ngIf="currentScreenSize === 'Small'" class="mobile-menu" (menuToggled)="hideContent($event)"></app-sidenav>
-<div class="main-menu-container">
-	<app-main-menu *ngIf="currentScreenSize !== 'Small'"></app-main-menu>
+<div class="component-container black" *ngIf="currentScreenSize !== 'Small'">
+	<app-main-menu></app-main-menu>
 </div>
 
-<div *ngIf="!isMenuVisible">
+<div *ngIf="!isMenuVisible && currentScreenSize === 'Small'">
 	<hero-mobile
 		[title]="title"
 		[mainText]="mainText"
 	></hero-mobile>
+</div>
+
+<div class="component-container black" *ngIf="currentScreenSize !== 'Small'">
+	<app-hero></app-hero>
 </div>
