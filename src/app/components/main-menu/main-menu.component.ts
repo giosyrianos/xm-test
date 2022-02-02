@@ -61,8 +61,6 @@ export class MainMenuComponent implements OnInit {
   }
 
 	buttonEnter(trigger: any, button: any) {
-		console.log(trigger)
-		console.log(button)
     setTimeout(() => {
       if(this.prevButtonTrigger && this.prevButtonTrigger != trigger){
         this.prevButtonTrigger.closeMenu();

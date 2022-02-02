@@ -47,7 +47,6 @@ export class AppComponent implements OnInit {
 		])
 		.pipe(takeUntil(this.destroyed))
 		.subscribe(result => {
-			console.log(result)
 			for (const query of Object.keys(result.breakpoints)) {
 				if (result.breakpoints[query]) {
 					this.currentScreenSize = this.displayNameMap.get(query) ?? 'Unknown';
