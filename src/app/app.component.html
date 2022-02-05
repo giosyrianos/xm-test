@@ -1,13 +1,11 @@
-<app-sidenav *ngIf="currentScreenSize === 'Small'" class="mobile-menu" (menuToggled)="hideContent($event)"></app-sidenav>
+<app-sidenav *ngIf="currentScreenSize === 'Small'" class="mobile-menu" (menuToggled)="hideContent($event)">
+</app-sidenav>
 <div class="component-container black" *ngIf="currentScreenSize !== 'Small'">
 	<app-main-menu></app-main-menu>
 </div>
 
 <div *ngIf="!isMenuVisible && currentScreenSize === 'Small'">
-	<hero-mobile
-		[title]="title"
-		[mainText]="mainText"
-	></hero-mobile>
+	<hero-mobile [title]="title" [mainText]="mainText"></hero-mobile>
 	<xm-carousel></xm-carousel>
 </div>
 
@@ -15,6 +13,14 @@
 	<app-hero></app-hero>
 </div>
 
-<div class="compoenent-container grey">
-	
+<div class="component-container grey" *ngIf="currentScreenSize !== 'Small'">
+	<div class="features-container">
+		<div class="feature-card" *ngFor="let feature of featuresList">
+			<img [src]="feature.image" alt="">
+			<div class="text">
+				<h3>Lorem ipsum dolor sit amet</h3>
+				<p>{{ feature.description }}</p>
+			</div>
+		</div>
+	</div>
 </div>

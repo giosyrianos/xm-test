@@ -12,7 +12,7 @@ import { takeUntil } from 'rxjs/operators';
 export class AppComponent implements OnInit {
 	destroyed = new Subject<void>();
 	currentScreenSize: string;
-// this should be provided by a service
+	// this should be provided by a service
 
 	title = `Lorem ipsum dolor? Excepteur sint occaecat!`;
 	mainText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -20,18 +20,36 @@ export class AppComponent implements OnInit {
 	consequat.`
 	isMenuVisible = false;
 
+	featuresList = [
+		{
+			id: 1,
+			image: 'assets/images/slide1.png',
+			description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit`
+		},
+		{
+			id: 2,
+			image: '/assets/images/slide2.png',
+			description: `Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.`
+		},
+		{
+			id: 3,
+			image: '/assets/images/slide3.png',
+			description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit.`
+		}
+	]
+
 	displayNameMap = new Map([
 		[Breakpoints.XSmall, 'Small'],
-    [Breakpoints.Small, 'Small'],
-    [Breakpoints.Medium, 'Medium'],
-    [Breakpoints.Large, 'Large'],
-    [Breakpoints.XLarge, 'XLarge'],
-  ]);
+		[Breakpoints.Small, 'Small'],
+		[Breakpoints.Medium, 'Medium'],
+		[Breakpoints.Large, 'Large'],
+		[Breakpoints.XLarge, 'XLarge'],
+	]);
 
 
 	constructor(public breakpointObserver: BreakpointObserver) {
 		this.setScreenSize()
-	 }
+	}
 
 	ngOnInit(): void {
 
@@ -45,14 +63,14 @@ export class AppComponent implements OnInit {
 			Breakpoints.Large,
 			Breakpoints.XLarge,
 		])
-		.pipe(takeUntil(this.destroyed))
-		.subscribe(result => {
-			for (const query of Object.keys(result.breakpoints)) {
-				if (result.breakpoints[query]) {
-					this.currentScreenSize = this.displayNameMap.get(query) ?? 'Unknown';
+			.pipe(takeUntil(this.destroyed))
+			.subscribe(result => {
+				for (const query of Object.keys(result.breakpoints)) {
+					if (result.breakpoints[query]) {
+						this.currentScreenSize = this.displayNameMap.get(query) ?? 'Unknown';
+					}
 				}
-			}
-		});
+			});
 	}
 
 	hideContent(e: any) {
