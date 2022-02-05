@@ -1,0 +1,31 @@
+<div class="carousel-container" style="height: 333px;">
+  <mat-carousel
+    timings="250ms ease-in"
+    [autoplay]="false"
+    color="primary"
+    maxWidth="auto"
+    [proportion]="90"
+    [slides]="slidesList.length"
+    [loop]="true"
+    [hideArrows]="true"
+    [hideIndicators]="false"
+    [useKeyboard]="true"
+    [useMouseWheel]="false"
+		slideHeight="300px"
+    orientation="ltr"
+  >
+    <mat-carousel-slide
+      #matCarouselSlide
+      *ngFor="let slide of slidesList; let i = index"
+      overlayColor="#000000"
+      [hideOverlay]="true"
+    >
+		<div class="inner-slide center-content">
+			<div class="slide-content center-content">
+				<img [src]="slide.image" alt="">
+				<p>{{ slide.title }}</p>
+			</div>
+		</div>
+		</mat-carousel-slide>
+  </mat-carousel>
+</div>

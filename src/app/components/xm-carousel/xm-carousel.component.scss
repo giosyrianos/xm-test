@@ -1,0 +1,24 @@
+.carousel-container {
+  height: 300px;
+  background-color: #fafafa;
+  padding: 4%;
+}
+
+
+.carousel-slide {
+}
+
+.inner-slide {
+  height: 100%;
+
+  .slide-content {
+    background-color: #fff;
+    width: 70%;
+		min-height: 77%;
+
+		p {
+			text-align: center;
+			padding: 10px 0;
+		}
+  }
+}

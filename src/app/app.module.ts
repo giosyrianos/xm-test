@@ -10,7 +10,8 @@ import { MobileMenuComponent } from './components/mobile-menu/mobile-menu.compon
 import { HeroMobileComponent } from './components/hero-mobile/hero-mobile.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { HeroComponent } from './components/hero/hero.component';
-
+import { MatCarouselModule } from '@ngbmodule/material-carousel';
+import { XmCarouselComponent } from './components/xm-carousel/xm-carousel.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,12 +19,14 @@ import { HeroComponent } from './components/hero/hero.component';
     MobileMenuComponent,
     HeroMobileComponent,
     MainMenuComponent,
-    HeroComponent
+		HeroComponent,
+  XmCarouselComponent
   ],
   imports: [
 		BrowserModule,
 		AngularMaterialModule,
-    BrowserAnimationsModule
+		BrowserAnimationsModule,
+		MatCarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
