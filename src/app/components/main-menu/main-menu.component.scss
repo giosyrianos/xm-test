@@ -35,3 +35,11 @@ header {
 
 }
 
+@media screen and (max-width: 1169px) and (min-width: 960px) {
+	.menu-container{
+		display: flex;
+		align-items: baseline;
+		justify-content: flex-end;
+	}
+}
+
