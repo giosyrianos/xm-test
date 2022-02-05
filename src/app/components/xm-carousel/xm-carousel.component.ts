@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'xm-carousel',
-  templateUrl: './xm-carousel.component.html',
-  styleUrls: ['./xm-carousel.component.scss']
+	selector: 'xm-carousel',
+	templateUrl: './xm-carousel.component.html',
+	styleUrls: ['./xm-carousel.component.scss']
 })
 export class XmCarouselComponent implements OnInit {
 	backgroundImg = `assets/images/bg1.png`
@@ -25,9 +25,9 @@ export class XmCarouselComponent implements OnInit {
 		}
 	]
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit(): void {
-  }
+	ngOnInit(): void {
+	}
 
 }
