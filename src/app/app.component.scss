@@ -23,6 +23,9 @@
   grid-template-columns: repeat(3, 1fr);
 	padding: 60px;
 	place-items: center;
+	border: 1px solid red;
+	max-width: 1124px;
+	margin: 0 auto;
 
 	.feature-card {
 		background-color: #fff;
